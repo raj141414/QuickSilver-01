@@ -151,7 +151,7 @@ async def split_file(path, size, file_, dirpath, split_size, listener, start_tim
             out_path = ospath.join(dirpath, parted_name)
             cmd = ["render", "-hide_banner", "-loglevel", "error", "-ss", str(start_time), "-i", path,
                    "-fs", str(split_size), "-map", "0", "-map_chapters", "-1", "-async", "1", "-strict",
-                   "-2", "-c", "copy", out_path]
+                   "-2", "-metadata title=\"@Blaster_Originals - \"", "-metadata:s:v title=\"@Blaster_Originals - \"", "-c", "copy", out_path]
             if not multi_streams:
                 del cmd[10]
                 del cmd[10]
